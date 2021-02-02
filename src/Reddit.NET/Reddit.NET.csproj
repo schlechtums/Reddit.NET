@@ -13,8 +13,8 @@
     <Description>Reddit.NET is a .NET Standard library that provides easy access to the Reddit API with virtually no boilerplate code required.</Description>
     <Copyright>Copyright (C) 2019 by Kris Craig</Copyright>
     <PackageLicenseUrl>https://github.com/sirkris/Reddit.NET/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/sirkris/Reddit.NET</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/sirkris/Reddit.NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/schlechtums/Reddit.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/schlechtums/Schlechtums.Core</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageIconUrl>https://raw.githubusercontent.com/sirkris/Reddit.NET/master/Logo.gif</PackageIconUrl>
     <PackageTags>reddit web utility http api oauth rest json netstandard</PackageTags>

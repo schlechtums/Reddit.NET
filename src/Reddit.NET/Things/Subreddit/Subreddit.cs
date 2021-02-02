@@ -292,7 +292,7 @@ namespace Reddit.Things
             SpoilersEnabled = subreddit.SpoilersEnabled;
             PrimaryColor = subreddit.PrimaryColor;
             SuggestedCommentSort = subreddit.SuggestedCommentSort;
-            ActiveUserCount = subreddit.ActiveUserCount;
+            ActiveUserCount = (int?)subreddit.ActiveUserCount;
             IconImg = subreddit.IconImg;
             CanAssignLinkFlair = subreddit.CanAssignLinkFlair;
             SubmitText = subreddit.submitText.SubmitText;

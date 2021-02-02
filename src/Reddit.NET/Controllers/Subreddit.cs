@@ -336,7 +336,7 @@ namespace Reddit.Controllers
         /// <summary>
         /// The active user count.
         /// </summary>
-        public int? ActiveUserCount
+        public Object ActiveUserCount
         {
             get
             {
@@ -344,7 +344,7 @@ namespace Reddit.Controllers
             }
             set
             {
-                ImportToExisting(activeUserCount: value ?? 0);
+                ImportToExisting(activeUserCount: value as int? ?? 0);
             }
         }
 
