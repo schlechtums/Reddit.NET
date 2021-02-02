@@ -25,7 +25,7 @@ jobs:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUBTOKEN}}        
 
       - name: Build solution and generate NuGet package
-        run: for /r %%i IN (*.sln) DO ( dotnet build "%%i" -nologo -c Release /property:Version=1.1.0.%GITHUB_RUN_NUMBER% )
+        run: for /r %%i IN (*.sln) DO ( dotnet build "%%i" -nologo -c Release /property:Version=1.4.0.%GITHUB_RUN_NUMBER% )
         shell: cmd
         
       - name: Push generated package to GitHub registry
