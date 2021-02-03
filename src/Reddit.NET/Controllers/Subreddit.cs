@@ -12,6 +12,25 @@ using System.Threading.Tasks;
 
 namespace Reddit.Controllers
 {
+    public enum PostTopDuration
+    {
+        Hour,
+        Day,
+        Week,
+        Month,
+        Year,
+        All
+    }
+
+    public enum PostSortType
+    {
+        Relevance,
+        Hot,
+        Top,
+        New,
+        Comments
+    }
+
     /// <summary>
     /// Controller class for subreddits.
     /// </summary>
@@ -1560,12 +1579,12 @@ namespace Reddit.Controllers
         /// <param name="show">(optional) the string all</param>
         /// <param name="srDetail">boolean value</param>
         /// <returns>A list of posts that match the search criteria.</returns>
-        public List<Post> Search(string q = "", bool restrictSr = true, string sort = "new", string category = "", bool includeFacets = false, string type = null,
-            string t = "all", string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
+        public List<Post> Search(string q = "", bool restrictSr = true, PostSortType sort = PostSortType.New, string category = "", bool includeFacets = false, string type = null,
+            PostTopDuration t = PostTopDuration.All, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
             string show = "all", bool srDetail = false)
         {
             return Lists.GetPosts(Validate(Dispatch.Search.GetSearch<Things.PostContainer>(
-                new SearchGetSearchInput(q, restrictSr, sort, category, includeFacets, type, t, after, before,
+                new SearchGetSearchInput(q, restrictSr, sort.ToString().ToLower(), category, includeFacets, type, t.ToString().ToLower(), after, before,
                     includeCategories, count, limit, show, srDetail),
                 Name)), Dispatch);
         }
