@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Reddit.Controllers;
 using Reddit.Exceptions;
 using Reddit.Inputs;
 using Reddit.Inputs.Listings;
@@ -143,7 +144,7 @@ namespace RedditTests.ModelTests
         [TestMethod]
         public void TopDay()
         {
-            PostContainer posts = reddit.Models.Listings.Top(new TimedCatSrListingInput("day", includeCategories: true));
+            PostContainer posts = reddit.Models.Listings.Top(new TimedCatSrListingInput(PostTopDuration.Day, includeCategories: true));
 
             Validate(posts);
         }

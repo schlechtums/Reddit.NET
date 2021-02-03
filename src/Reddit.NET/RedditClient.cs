@@ -551,7 +551,7 @@ namespace Reddit
         /// <param name="srDetail">boolean value</param>
         /// <returns>A list of posts that match the search criteria.</returns>
         public List<Post> Search(string q = "", string sort = "new", string category = "", bool includeFacets = false, string type = null,
-            string t = "all", string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
+            PostTopDuration t = PostTopDuration.All, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
             string show = "all", bool srDetail = false)
         {
             return Account.Lists.GetPosts(Account.Validate(Models.Search.SearchPosts(

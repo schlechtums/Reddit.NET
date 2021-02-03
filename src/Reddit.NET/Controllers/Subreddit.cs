@@ -1584,7 +1584,7 @@ namespace Reddit.Controllers
             string show = "all", bool srDetail = false)
         {
             return Lists.GetPosts(Validate(Dispatch.Search.GetSearch<Things.PostContainer>(
-                new SearchGetSearchInput(q, restrictSr, sort.ToString().ToLower(), category, includeFacets, type, t.ToString().ToLower(), after, before,
+                new SearchGetSearchInput(q, restrictSr, sort.ToString().ToLower(), category, includeFacets, type, t, after, before,
                     includeCategories, count, limit, show, srDetail),
                 Name)), Dispatch);
         }

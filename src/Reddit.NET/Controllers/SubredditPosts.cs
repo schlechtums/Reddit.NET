@@ -426,8 +426,8 @@ namespace Reddit.Controllers
 
         private Dispatch Dispatch;
 
-        private string TopT { get; set; } = "all";
-        private string ControversialT { get; set; } = "all";
+        private PostTopDuration TopT { get; set; } = PostTopDuration.All;
+        private PostTopDuration ControversialT { get; set; } = PostTopDuration.All;
 
         /// <summary>
         /// Create a new instance of the subreddit posts controller.
@@ -621,7 +621,7 @@ namespace Reddit.Controllers
         /// <param name="limit">The maximum number of results to be retrieved (default: 100)</param>
         /// <param name="isInterface">(optional) whether to store the result cache in the interface</param>
         /// <returns>A list of posts.</returns>
-        public List<Post> GetTop(string t = "all", string after = "", string before = "", int limit = 100, bool isInterface = false)
+        public List<Post> GetTop(PostTopDuration t = PostTopDuration.All, string after = "", string before = "", int limit = 100, bool isInterface = false)
         {
             return GetTop(new TimedCatSrListingInput(t, after, before, limit: limit), isInterface);
         }
@@ -659,7 +659,7 @@ namespace Reddit.Controllers
         /// <param name="limit">The maximum number of results to be retrieved (default: 100)</param>
         /// <param name="isInterface">(optional) whether to store the result cache in the interface</param>
         /// <returns>A list of posts.</returns>
-        public List<Post> GetControversial(string t = "all", string after = "", string before = "", int limit = 100, bool isInterface = false)
+        public List<Post> GetControversial(PostTopDuration t = PostTopDuration.All, string after = "", string before = "", int limit = 100, bool isInterface = false)
         {
             return GetControversial(new TimedCatSrListingInput(t, after, before, limit: limit), isInterface);
         }

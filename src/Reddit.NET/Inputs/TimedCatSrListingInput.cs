@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reddit.Controllers;
+using System;
 
 namespace Reddit.Inputs
 {
@@ -8,7 +9,7 @@ namespace Reddit.Inputs
         /// <summary>
         /// one of (hour, day, week, month, year, all)
         /// </summary>
-        public string t { get; set; }
+        public PostTopDuration t { get; set; }
 
         /// <summary>
         /// This endpoint is a listing.
@@ -21,7 +22,7 @@ namespace Reddit.Inputs
         /// <param name="limit">the maximum number of items desired (default: 25, maximum: 100)</param>
         /// <param name="show">(optional) the string all</param>
         /// <param name="srDetail">(optional) expand subreddits</param>
-        public TimedCatSrListingInput(string t = "all", string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
+        public TimedCatSrListingInput(PostTopDuration t = PostTopDuration.All, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
             string show = "all", bool srDetail = false)
             : base(after, before, count, limit, show, srDetail, includeCategories)
         {
