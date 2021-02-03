@@ -14,21 +14,21 @@ namespace Reddit.Controllers
 {
     public enum PostTopDuration
     {
-        Hour,
-        Day,
-        Week,
-        Month,
-        Year,
-        All
+        hour,
+        day,
+        week,
+        month,
+        year,
+        all
     }
 
     public enum PostSortType
     {
-        Relevance,
-        Hot,
-        Top,
-        New,
-        Comments
+        relevance,
+        hot,
+        top,
+        @new,
+        comments
     }
 
     /// <summary>
@@ -1579,8 +1579,8 @@ namespace Reddit.Controllers
         /// <param name="show">(optional) the string all</param>
         /// <param name="srDetail">boolean value</param>
         /// <returns>A list of posts that match the search criteria.</returns>
-        public List<Post> Search(string q = "", bool restrictSr = true, PostSortType sort = PostSortType.New, string category = "", bool includeFacets = false, string type = null,
-            PostTopDuration t = PostTopDuration.All, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
+        public List<Post> Search(string q = "", bool restrictSr = true, PostSortType sort = PostSortType.@new, string category = "", bool includeFacets = false, string type = null,
+            PostTopDuration t = PostTopDuration.all, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
             string show = "all", bool srDetail = false)
         {
             return Lists.GetPosts(Validate(Dispatch.Search.GetSearch<Things.PostContainer>(

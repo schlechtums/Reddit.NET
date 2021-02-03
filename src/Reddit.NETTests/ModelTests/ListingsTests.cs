@@ -144,7 +144,7 @@ namespace RedditTests.ModelTests
         [TestMethod]
         public void TopDay()
         {
-            PostContainer posts = reddit.Models.Listings.Top(new TimedCatSrListingInput(PostTopDuration.Day, includeCategories: true));
+            PostContainer posts = reddit.Models.Listings.Top(new TimedCatSrListingInput(PostTopDuration.day, includeCategories: true));
 
             Validate(posts);
         }

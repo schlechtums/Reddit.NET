@@ -54,7 +54,7 @@ namespace Reddit.Inputs.Search
         /// <param name="show">(optional) the string all</param>
         /// <param name="srDetail">boolean value</param>
         public SearchGetSearchInput(string q = "", bool restrictSr = true, string sort = "new", string category = "", bool includeFacets = false, string type = null,
-            PostTopDuration t = PostTopDuration.All, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
+            PostTopDuration t = PostTopDuration.all, string after = null, string before = null, bool includeCategories = false, int count = 0, int limit = 25,
             string show = "all", bool srDetail = false)
             : base(t, after, before, includeCategories, count, limit, show, srDetail)
         {

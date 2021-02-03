@@ -130,7 +130,7 @@ namespace Example
                 Console.WriteLine("Done monitoring!");
 
                 // Grab today's top post in AskReddit and monitor its new comments.  --Kris
-                Post post = sub.Posts.GetTop(PostTopDuration.Day)[0];
+                Post post = sub.Posts.GetTop(PostTopDuration.day)[0];
                 post.Comments.GetNew();
 
                 Console.WriteLine("Monitoring today's top post on AskReddit....");
